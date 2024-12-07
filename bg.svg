@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 810" preserveAspectRatio="xMaxYMax slice">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121212" />
+      <stop offset="100%" stop-color="#1E1E1E" />
+    </linearGradient>
+    
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="30" />
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg-gradient)" />
+  
+  <!-- Animated Shapes -->
+  <g id="shapes">
+    <circle cx="-100" cy="200" r="150" fill="#FF6F61" opacity="0.2">
+      <animateTransform 
+        attributeName="transform"
+        type="translate"
+        from="0 0"
+        to="1600 300"
+        dur="20s"
+        repeatCount="indefinite"
+      />
+      <animate 
+        attributeName="r"
+        values="150;200;150"
+        dur="15s"
+        repeatCount="indefinite"
+      />
+    </circle>
+    
+    <circle cx="1500" cy="600" r="100" fill="#FF6F61" opacity="0.15">
+      <animateTransform 
+        attributeName="transform"
+        type="translate"
+        from="0 0"
+        to="-1600 -300"
+        dur="25s"
+        repeatCount="indefinite"
+      />
+      <animate 
+        attributeName="r"
+        values="100;150;100"
+        dur="18s"
+        repeatCount="indefinite"
+      />
+    </circle>
+    
+    <path fill="#FF6F61" opacity="0.1" d="M0,0 Q500,300 800,200 Q1200,100 1440,0" filter="url(#blur)">
+      <animateTransform 
+        attributeName="transform"
+        type="translate"
+        from="0 0"
+        to="100 50"
+        dur="15s"
+        repeatCount="indefinite"
+      />
+    </path>
+  </g>
+</svg>

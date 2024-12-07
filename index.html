@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dish Craft - Transform Your Cooking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation">
+        <img src="bg.svg" alt="Background Animation">
+    </div>
+  <!-- Hero Section -->
+  <div class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Dish Craft</h1>
+        <div class="preview-tooltip-container">
+            <h3 class="preview-tag" data-tooltip="This is an early version of Dish Craft. Expect exciting features and potential improvements as we develop the app.">
+              <i class="fas fa-info-circle info-icon"></i>
+              Preview Release
+            </h3>
+          </div>
+        <p>Intelligent Cooking, Endless Inspiration</p>
+        <button class="cta-button" onclick="showDownloadCard()">Get Started</button>
+      </div>
+    </section>
+    <!-- Hidden Download Card -->
+    <div class="download-overlay" id="download-overlay">
+      <section class="download-card" id="download-card">
+        <div class="card-content">
+          <span class="close-btn" onclick="hideDownloadCard()">&times;</span>
+          <h2>Download Dish Craft</h2>
+          <p>Get the ultimate cooking companion on your Android device</p>
+          <div class="download-options">
+            <button class="download-button" onclick="downloadAPK()">
+              <span>Download for Android</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

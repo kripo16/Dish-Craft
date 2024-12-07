@@ -1,0 +1,214 @@
+:root {
+    --primary-color: #FF6F61;
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --secondary-color: #1E1E1E;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  /* New background styles */
+  .background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background-image: url('bg.svg');
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: -15px;
+    font-weight: 700;
+    text-shadow: 0 4px 6px rgba(255, 111, 97, 0.3);
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(255, 111, 97, 0.4);
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(255, 111, 97, 0.5);
+  }
+  
+  .download-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .download-overlay.show {
+    display: flex;
+    opacity: 1;
+  }
+  
+  .download-card {
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    max-width: 600px;
+    width: 90%;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    transform: scale(0.7);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .download-overlay.show .download-card {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .download-card .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  
+  .download-card h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .download-card p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 25px;
+  }
+  
+  .download-button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 10px 20px rgba(255, 111, 97, 0.4);
+  }
+  
+  .download-button:hover {
+    background-color: #ff5f4d;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(255, 111, 97, 0.5);
+  }
+
+  .preview-tooltip-container {
+    position: fixed;
+    top: 20px;
+    right: 20px; /* Or change to right: 20px */
+    z-index: 2;
+  }
+  
+  .preview-tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(255, 111, 97, 0.2);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .preview-tag .info-icon {
+    margin-right: 8px;
+    color: var(--primary-color);
+    font-size: 1rem;
+  }
+
+/* Adjustments for mobile devices */
+@media (max-width: 768px) {
+  .background-animation {
+    background-size: cover; /* Ensures the whole image fits within the screen without distortion */
+    background-position: center bottom ; /* Adjusts position so the most important part of the background is visible */
+  }
+}
+
+/* Further adjustments for very small devices */
+@media (max-width: 480px) {
+  .background-animation {
+    background-size: cover;
+    background-position: center bottom ;
+  }
+}
+  
+  
+  
