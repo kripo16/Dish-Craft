@@ -24,7 +24,7 @@ import Icon from "react-native-vector-icons/MaterialIcons";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Initialize the Generative AI model with API key and configuration
-const apiKey = "AIzaSyBo6qjZIXfO-9HE-Dimwc2HaqzCQ323qMQ";
+const apiKey = "";
 const model = new GoogleGenerativeAI(apiKey).getGenerativeModel({
   model: "gemini-1.5-flash",
   systemInstruction: `
@@ -82,7 +82,7 @@ const generationConfig = {
   responseMimeType: "text/plain",
 };
 
-const pexelsApiKey = "LPQfjKq1VZkPaexPFKvxfnGnbvsQDKyLkMRAwsDZg0WhODwXN9NOKsFx";
+const pexelsApiKey = "";
 
 export default function App() {
   const [ingredients, setIngredients] = useState("");
